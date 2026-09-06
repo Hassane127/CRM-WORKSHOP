@@ -1,0 +1,96 @@
+/* ============================================================
+   Sa CRM — jetons de design
+   Valeurs extraites de la maquette de référence (Sa CRM).
+   Seule source de vérité visuelle du projet : toute couleur,
+   taille, espacement ou rayon utilisé dans l'application
+   doit venir d'une variable ci-dessous.
+   ============================================================ */
+
+/* Police : Plus Jakarta Sans + icônes Material Symbols Rounded.
+   À charger dans le <head> du projet :
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0..1,0&display=swap">
+*/
+
+:root {
+  /* --- Bleu de marque -------------------------------------- */
+  --sa-primary:        #145DFF;   /* boutons principaux, élément de menu actif, barres */
+  --sa-primary-hover:  #0F4BD1;
+  --sa-primary-deep:   #1345A8;
+  --sa-primary-soft:   #EEF2F8;   /* fond de survol, surbrillance légère */
+  --sa-primary-pale:   #C8D8FF;   /* barres secondaires d'un graphique */
+  --sa-accent:         #3FD8FF;   /* cyan — réservé à la mise en valeur (étape « Gagné ») */
+
+  /* --- Texte ------------------------------------------------ */
+  --sa-text:           #0B1F4D;   /* titres et texte principal */
+  --sa-text-2:         #5A6880;   /* texte secondaire */
+  --sa-text-muted:     #7C8AA5;   /* libellés, métadonnées */
+  --sa-text-faint:     #9AA7BE;   /* états vides, mentions discrètes */
+  --sa-text-inverse:   #FFFFFF;
+
+  /* --- Surfaces --------------------------------------------- */
+  --sa-bg:             #F8FAFC;   /* fond de page */
+  --sa-surface:        #FFFFFF;   /* cartes, tableaux, menu latéral */
+  --sa-surface-2:      #F1F5FB;   /* zones en retrait, en-têtes de tableau */
+  --sa-surface-3:      #F6F9FE;
+  --sa-border:         #E9EEF5;
+  --sa-border-strong:  #C6D0E0;
+
+  /* --- Statuts ---------------------------------------------- */
+  --sa-success:        #0E9F6E;   /* gagné, terminé */
+  --sa-success-ink:    #0B6B4A;   /* texte sur fond vert clair */
+  --sa-danger:         #DC2626;   /* en retard, perdu */
+  --sa-danger-ink:     #B02121;
+  --sa-warning-ink:    #8A5206;   /* en attente */
+  --sa-info-ink:       #0A566E;
+
+  /* --- Typographie ------------------------------------------ */
+  --sa-font:       'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --sa-font-icons: 'Material Symbols Rounded';
+
+  --sa-text-2xs:  10.5px;  /* micro-libellés en capitales */
+  --sa-text-xs:   11.5px;  /* badges, dates, compteurs */
+  --sa-text-sm:   12.5px;  /* métadonnées de ligne */
+  --sa-text-base: 13px;    /* texte courant, tableaux */
+  --sa-text-md:   14px;    /* éléments de menu, boutons */
+  --sa-text-lg:   18px;    /* titres de carte, icônes */
+  --sa-text-xl:   22px;    /* titre de page, valeurs des indicateurs */
+  --sa-text-2xl:  24px;
+
+  --sa-weight-medium: 500;
+  --sa-weight-semi:   600;
+  --sa-weight-bold:   700;
+  --sa-weight-black:  800;   /* titres de page et grands chiffres uniquement */
+
+  --sa-tracking-tight: -0.01em;  /* titres */
+  --sa-tracking-wide:   0.06em;  /* libellés en capitales */
+
+  /* --- Espacements ------------------------------------------ */
+  --sa-space-1:  4px;
+  --sa-space-2:  8px;
+  --sa-space-3: 12px;
+  --sa-space-4: 16px;
+  --sa-space-5: 18px;
+  --sa-space-6: 24px;
+
+  --sa-gap-tight: 7px;    /* icône + texte */
+  --sa-gap:      10px;    /* éléments d'une même ligne */
+  --sa-gap-card: 14px;    /* entre deux cartes */
+
+  /* --- Formes ----------------------------------------------- */
+  --sa-radius-sm:   8px;
+  --sa-radius:     12px;   /* cartes, boutons, champs */
+  --sa-radius-lg:  16px;   /* grands panneaux */
+  --sa-radius-pill: 99px;  /* badges, puces de tendance */
+
+  --sa-shadow:     0 1px 2px rgba(11, 31, 77, .04);
+  --sa-shadow-lg:  0 18px 44px rgba(11, 31, 77, .16);
+  --sa-ring:       0 0 0 3px rgba(20, 93, 255, .14);  /* focus clavier */
+
+  /* --- Structure -------------------------------------------- */
+  --sa-sidebar-width: 246px;
+  --sa-topbar-height:  60px;
+  --sa-content-max:  1400px;
+}
