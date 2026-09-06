@@ -33,12 +33,14 @@ export default function ListeContacts({
   lignes,
   statuts,
   entreprises,
+  rechercheInitiale = '',
 }: {
   lignes: LigneContact[];
   statuts: string[];
   entreprises: string[];
+  rechercheInitiale?: string;
 }) {
-  const [recherche, setRecherche] = useState('');
+  const [recherche, setRecherche] = useState(rechercheInitiale);
   const [statut, setStatut] = useState('Tous');
   const [entreprise, setEntreprise] = useState('Toutes');
 

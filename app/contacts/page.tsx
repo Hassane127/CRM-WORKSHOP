@@ -1,4 +1,5 @@
-import ListeContacts from '@/components/ListeContacts';
+import { Suspense } from 'react';
+import ContactsAvecRecherche from '@/components/ContactsAvecRecherche';
 import type { LigneContact } from '@/components/ListeContacts';
 import {
   contacts,
@@ -43,11 +44,13 @@ export default function PageContacts() {
       </div>
 
       <section className="carte">
-        <ListeContacts
-          lignes={lignes}
-          statuts={statuts}
-          entreprises={nomsEntreprises}
-        />
+        <Suspense fallback={null}>
+          <ContactsAvecRecherche
+            lignes={lignes}
+            statuts={statuts}
+            entreprises={nomsEntreprises}
+          />
+        </Suspense>
       </section>
     </main>
   );

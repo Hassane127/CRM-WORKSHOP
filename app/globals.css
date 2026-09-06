@@ -849,3 +849,38 @@ a {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* La recherche globale de la barre supérieure est un vrai champ :
+   elle envoie le terme à la page Contacts. */
+
+.recherche:focus-within {
+  border-color: var(--sa-border-strong);
+  box-shadow: var(--sa-ring);
+}
+
+.recherche input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--sa-text);
+  font-family: var(--sa-font);
+  font-size: var(--sa-text-base);
+  font-weight: var(--sa-weight-medium);
+}
+
+.recherche-envoi {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--sa-text-muted);
+  cursor: pointer;
+  font-size: var(--sa-text-base);
+}
+
+.recherche-envoi:hover {
+  color: var(--sa-primary);
+}
