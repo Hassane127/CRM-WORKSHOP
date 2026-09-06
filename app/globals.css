@@ -541,3 +541,311 @@ a {
   margin: 0;
   font-size: var(--sa-text-base);
 }
+
+/* ============================================================
+   Page Contacts — filtres, tableau, fiche
+   ============================================================ */
+
+.filtres {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sa-gap);
+}
+
+.champ {
+  display: flex;
+  align-items: center;
+  gap: var(--sa-gap-tight);
+  padding: var(--sa-space-2) var(--sa-space-3);
+  background: var(--sa-surface);
+  border: 1px solid var(--sa-border);
+  border-radius: var(--sa-radius);
+  color: var(--sa-text-muted);
+}
+
+.champ:focus-within {
+  border-color: var(--sa-border-strong);
+  box-shadow: var(--sa-ring);
+}
+
+.champ-large {
+  flex: 1;
+  min-width: calc(var(--sa-content-max) / 6);
+}
+
+.champ input,
+.champ select {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--sa-text);
+  font-family: var(--sa-font);
+  font-size: var(--sa-text-base);
+  font-weight: var(--sa-weight-medium);
+}
+
+.champ select {
+  cursor: pointer;
+}
+
+.filtres-resultat {
+  margin-left: auto;
+  font-size: var(--sa-text-sm);
+  color: var(--sa-text-muted);
+}
+
+/* ---------- tableau ---------- */
+
+.tableau-cadre {
+  overflow-x: auto;
+}
+
+.tableau {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--sa-text-base);
+}
+
+.tableau thead th {
+  text-align: left;
+  padding: var(--sa-space-2) var(--sa-space-3);
+  background: var(--sa-surface-2);
+  color: var(--sa-text-muted);
+  font-size: var(--sa-text-2xs);
+  font-weight: var(--sa-weight-bold);
+  letter-spacing: var(--sa-tracking-wide);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tableau thead th:first-child {
+  border-radius: var(--sa-radius-sm) 0 0 var(--sa-radius-sm);
+}
+
+.tableau thead th:last-child {
+  border-radius: 0 var(--sa-radius-sm) var(--sa-radius-sm) 0;
+}
+
+.tableau tbody tr {
+  border-bottom: 1px solid var(--sa-border);
+}
+
+.tableau tbody tr:hover {
+  background: var(--sa-primary-soft);
+}
+
+.tableau td {
+  padding: var(--sa-space-3);
+  vertical-align: middle;
+}
+
+.tableau a {
+  display: block;
+}
+
+.cellule-personne {
+  display: flex;
+  align-items: center;
+  gap: var(--sa-gap);
+}
+
+.cellule-nom {
+  font-weight: var(--sa-weight-bold);
+}
+
+.cellule-fonction {
+  display: block;
+  font-size: var(--sa-text-sm);
+  color: var(--sa-text-muted);
+}
+
+.cellule-discrete {
+  color: var(--sa-text-2);
+}
+
+.cellule-date {
+  color: var(--sa-text-muted);
+  font-size: var(--sa-text-sm);
+  white-space: nowrap;
+}
+
+/* ---------- badge de statut ---------- */
+
+.badge {
+  display: inline-block;
+  padding: var(--sa-space-1) var(--sa-space-2);
+  border-radius: var(--sa-radius-sm);
+  background: var(--sa-surface-2);
+  font-size: var(--sa-text-xs);
+  font-weight: var(--sa-weight-bold);
+  white-space: nowrap;
+}
+
+.badge-client   { color: var(--sa-success-ink); }
+.badge-prospect { color: var(--sa-info-ink); }
+.badge-lead     { color: var(--sa-warning-ink); }
+.badge-inactif  { color: var(--sa-text-faint); }
+.badge-gagne    { color: var(--sa-success-ink); }
+.badge-perdu    { color: var(--sa-danger-ink); }
+.badge-encours  { color: var(--sa-primary-deep); }
+.badge-retard   { color: var(--sa-danger-ink); }
+.badge-fait     { color: var(--sa-success-ink); }
+
+/* ---------- aucun résultat ---------- */
+
+.aucun-resultat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sa-space-2);
+  padding: var(--sa-space-6);
+  text-align: center;
+}
+
+.aucun-resultat .icone {
+  font-size: var(--sa-text-2xl);
+  color: var(--sa-text-faint);
+}
+
+.aucun-resultat-titre {
+  margin: 0;
+  font-size: var(--sa-text-base);
+  font-weight: var(--sa-weight-bold);
+}
+
+.aucun-resultat-aide {
+  margin: 0;
+  font-size: var(--sa-text-sm);
+  color: var(--sa-text-muted);
+}
+
+/* ---------- fiche d'un contact ---------- */
+
+.retour {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sa-space-1);
+  font-size: var(--sa-text-sm);
+  font-weight: var(--sa-weight-semi);
+  color: var(--sa-text-muted);
+}
+
+.retour:hover {
+  color: var(--sa-text);
+}
+
+.retour .icone {
+  font-size: var(--sa-text-md);
+}
+
+.fiche-entete {
+  display: flex;
+  align-items: center;
+  gap: var(--sa-gap);
+}
+
+.avatar-grand {
+  width: var(--sa-text-2xl);
+  height: var(--sa-text-2xl);
+  flex: 0 0 var(--sa-text-2xl);
+  border-radius: var(--sa-radius-pill);
+  background: var(--sa-primary-soft);
+  color: var(--sa-primary-deep);
+  display: grid;
+  place-items: center;
+  font-size: var(--sa-text-sm);
+  font-weight: var(--sa-weight-bold);
+}
+
+.fiche-colonnes {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: var(--sa-gap-card);
+  align-items: start;
+}
+
+.fiche-pile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sa-gap-card);
+}
+
+.paire {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sa-gap);
+  padding: var(--sa-space-2) 0;
+  border-bottom: 1px solid var(--sa-border);
+}
+
+.paire:last-child {
+  border-bottom: none;
+}
+
+.paire-cle {
+  font-size: var(--sa-text-sm);
+  color: var(--sa-text-muted);
+}
+
+.paire-valeur {
+  font-weight: var(--sa-weight-semi);
+  text-align: right;
+  word-break: break-word;
+}
+
+.ligne-liste {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sa-gap);
+  padding: var(--sa-space-3) 0;
+  border-bottom: 1px solid var(--sa-border);
+}
+
+.ligne-liste:last-child {
+  border-bottom: none;
+}
+
+.ligne-liste:first-child {
+  padding-top: 0;
+}
+
+.ligne-titre {
+  font-weight: var(--sa-weight-semi);
+}
+
+.ligne-meta {
+  display: block;
+  font-size: var(--sa-text-sm);
+  color: var(--sa-text-muted);
+}
+
+.ligne-droite {
+  display: flex;
+  align-items: center;
+  gap: var(--sa-gap);
+  white-space: nowrap;
+}
+
+.ligne-montant {
+  font-weight: var(--sa-weight-bold);
+}
+
+.liste-vide {
+  margin: 0;
+  padding: var(--sa-space-3) 0;
+  font-size: var(--sa-text-base);
+  color: var(--sa-text-faint);
+}
+
+@media (max-width: 1100px) {
+  .indicateurs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .fiche-colonnes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

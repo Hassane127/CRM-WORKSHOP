@@ -28,6 +28,29 @@ export function nomComplet(c: Contact): string {
   return c.prenom + ' ' + c.nom;
 }
 
+/* ---------- tout ce qui concerne un contact ---------- */
+
+export function opportunitesDuContact(contactId: string): Opportunite[] {
+  return opportunites.filter((o) => o.contactId === contactId);
+}
+
+export function tachesDuContact(contactId: string): Tache[] {
+  return taches
+    .filter((t) => t.contactId === contactId)
+    .sort((a, b) => a.echeance.localeCompare(b.echeance));
+}
+
+export function activitesDuContact(contactId: string): Activite[] {
+  return activites
+    .filter((a) => a.contactId === contactId)
+    .sort((a, b) => b.date.localeCompare(a.date));
+}
+
+/** Une tâche est en retard si elle n'est pas terminée et que sa date est passée. */
+export function estEnRetard(tache: Tache, maintenant: Date = new Date()): boolean {
+  return !tache.terminee && new Date(tache.echeance) < maintenant;
+}
+
 /* ---------- indicateurs de l'accueil ---------- */
 
 export type Indicateurs = {
